@@ -5,7 +5,7 @@ local test_ModeAhax = false;
 local KeySystem_Domain = "https://pandadevelopment.net"
 
 -- Evon Basic Configurations
-local ConfigURL = "https://raw.githubusercontent.com/SkieAdmin/EvonAndroidGUI/main/EvonConfig.json"
+local ConfigURL = "https://raw.githubusercontent.com/RandomUserRay/UnknownScript/main/EvonConfig.json"
 
 local http_service = cloneref(game:GetService("HttpService"))
 local EvonConfiguration = http_service:JSONDecode(game:HttpGet(ConfigURL))
