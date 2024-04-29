@@ -2833,7 +2833,7 @@ local function OYDDQ_fake_script() -- VegaXAndroidUI.Loading
 		end
 	end)
 	
-	local KeyIsValid = false
+	local KeyIsValid = true
 	
 	script.Parent.KeySystem.ApproveKeyB.MouseButton1Click:connect(function()
 		script.Parent.KeySystem.SubTitle.FontFace.Weight = Enum.FontWeight.Regular
