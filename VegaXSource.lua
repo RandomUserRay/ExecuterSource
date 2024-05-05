@@ -3,6 +3,7 @@
 
 -- Instances:
 
+local keyless = true
 local VegaXAndroidUI = Instance.new("ScreenGui")
 local SettingsWindow = Instance.new("Frame")
 local WindowMainTitle = Instance.new("TextLabel")
