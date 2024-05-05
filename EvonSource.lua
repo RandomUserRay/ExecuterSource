@@ -1,5 +1,5 @@
 
-local Developer_Player = "271635429"
+local Developer_Player = "3219018445"
 local test_ModeAhax = false;
 
 local KeySystem_Domain = "https://pandadevelopment.net"
@@ -27,19 +27,12 @@ end
 
 -- Get Evon's Version
 warn("----------------------------------------------------------")
-print("Client Version: ".. arceus.getversion())
+print("Keyless Version By Muqh") 
 print("Server Version: ".. EvonConfiguration.Version)
 print("Forced Update: ".. tostring(EvonConfiguration.Forced_Update))
 warn("----------------------------------------------------------")
 
--- Check if the Evon GUI is on Latest Version
-if arceus.getversion() ~= EvonConfiguration.Version then
-	warn('Outdated Version, Game Kicked')
-	game.Players.LocalPlayer:Kick("A New Version of Evon has been Detected, Please Download Latest Version") 
-else
-	print('Evon Client is Up to Date.... All Good')
-end
-
+print('Evon Client is Up to Date.... All Good')
 
 local function EvonDebug(text)
 	if tostring(game:GetService("Players").LocalPlayer.UserId) == Developer_Player then
@@ -59,7 +52,7 @@ local function EvonCheckKey(ClientKey)
 		end
 		return false
 	elseif EvonConfiguration.Keyless then
-		EvonNotification("Key System Disabled...")
+		EvonNotification("Keyless Version Made By Muqh")
 		return true
 	elseif PandaAuth:ValidateKey(evonID, ClientKey) then
 		print('Authorized Complete')
