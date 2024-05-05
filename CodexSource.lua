@@ -4597,7 +4597,7 @@ do
 
 		local function updateText()
 			local expiryTime, streak = fetchData()
-			local keyless = false
+			local keyless = true
 			
 			local function getTimeLeft()
 				return expiryTime - os.time()
