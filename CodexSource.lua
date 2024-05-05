@@ -4326,11 +4326,6 @@ do
 
 			changelog().Parent = ui;
 			local currentVersion = identifyexecutor and select(2, identifyexecutor()) or "Invalid Version";
-			if not (cloneref(game:GetService("RunService")):IsStudio() or internalUtils:AreVersionsAlike(currentVersion, isiosdevice() and internalSettings.data.iosVersion or internalSettings.data.androidVersion)) then
-				dataStep:Complete("Please update Codex.");
-				return;
-			end
-			dataStep:Complete();
 
 			local whitelistStep = startupStep.new("Waiting for you to Whitelist...", "Whitelisted!", ui.whitelist.process):Start();
 			local isStudio = cloneref(game:GetService("RunService")):IsStudio()
