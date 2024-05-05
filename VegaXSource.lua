@@ -2690,7 +2690,7 @@ local function OYDDQ_fake_script() -- VegaXAndroidUI.Loading
 	
 	PandaAuth = loadstring(game:HttpGet('https://raw.githubusercontent.com/Panda-Repositories/PandaKS_Libraries/main/library/LuaLib/ROBLOX/PandaBetaLib.lua'))()
 	KSCanUse = true
-	BKKeySystem = "vegax_90453sda175chd3826f1a4e7fd78qwdnd0d6e6a532f518e716qwfd3014997"
+	BKKeySystem = "keyless"
 	
 	
 	function Generate_Key()
@@ -2833,7 +2833,7 @@ local function OYDDQ_fake_script() -- VegaXAndroidUI.Loading
 	script.Parent.KeySystem.ApproveKeyB.MouseButton1Click:connect(function()
 		script.Parent.KeySystem.SubTitle.FontFace.Weight = Enum.FontWeight.Regular
 		
-		if KSCanUse == false then
+		if KSCanUse == true then
 			if script.Parent.KeySystem.TextBox.Text == BKKeySystem then
 				KeyIsValid = true
 			end
