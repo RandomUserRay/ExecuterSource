@@ -4326,6 +4326,11 @@ do
 
 			changelog().Parent = ui;
 			local currentVersion = identifyexecutor and select(2, identifyexecutor()) or "Invalid Version";
+			if not (cloneref(game:GetService("RunService")):IsStudio() or internalUtils:AreVersionsAlike(currentVersion, isiosdevice() and internalSettings.data.iosVersion or internalSettings.data.androidVersion)) then
+				dataStep:Complete("Please update Codex.");
+				return;
+			end
+			dataStep:Complete();
 
 			local whitelistStep = startupStep.new("Waiting for you to Whitelist...", "Whitelisted!", ui.whitelist.process):Start();
 			local isStudio = cloneref(game:GetService("RunService")):IsStudio()
@@ -4543,7 +4548,7 @@ do
 					FontSize = Enum.FontSize.Size12, 
 					Name = "poweredBy", 
 					Position = UDim2.new(0, 78, 0, 59), 
-					Text = "Powered By SPDM Team", 
+					Text = "discord.gg/robloxexploits", 
 					TextColor3 = Color3.fromHex("717176"), 
 					TextSize = 12, 
 					TextTransparency = 1, 
@@ -4592,7 +4597,7 @@ do
 
 		local function updateText()
 			local expiryTime, streak = fetchData()
-			local keyless = true
+			local keyless = false
 			
 			local function getTimeLeft()
 				return expiryTime - os.time()
@@ -4669,7 +4674,7 @@ do
 
 				fadeOut:Play()
 				fadeOut.Completed:Wait()
-				textLabel.Text = "Powered By SPDM Team"
+				textLabel.Text = "discord.gg/robloxexploits"
 				fadeIn:Play()
 				fadeIn.Completed:Wait()
 
