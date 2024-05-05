@@ -2690,6 +2690,11 @@ local function OYDDQ_fake_script() -- VegaXAndroidUI.Loading
 	-- Key System Pre-Requisities
 	
 	PandaAuth = loadstring(game:HttpGet('https://raw.githubusercontent.com/Panda-Repositories/PandaKS_Libraries/main/library/LuaLib/ROBLOX/PandaBetaLib.lua'))()
+
+if keyless then
+        print("Keyless")
+        PandaAuth = true
+
 	KSCanUse = true
 	BKKeySystem = "keyless"
 	
