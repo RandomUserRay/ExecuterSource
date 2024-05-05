@@ -7,18 +7,29 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/VegieIsCute/stuff/mai
     Author: Lxnny_Termed#0795 & Chillz#0348 (DeltaTeam)
 ]]
 
+local arceus = arceus or nil
+
 local httpService = cloneref(game:GetService("HttpService"));
 
 local _tablefind = clonefunction(table.find);
 
+local clonefunction = function(funct: funct)
+	if not funct then
+		return nil
+	end
+
+	if clonefunction then
+		return clonefunction(funct)
+	end
+
+	return function(...)
+		return typeof(funct) == "function" and funct(...) or funct
+	end
+end
+
 local isA = clonefunction(game.IsA);
 
 local GuiService = game:GetService("GuiService")
-
-
-
-local getversion = clonefunction(arceus.getversion) or nil -- APK version
-local ispermissiongranted = clonefunction(arceus.ispermissiongranted) or nil -- Storage perms
 
 local isarceusfolder = clonefunction(arceus.isarceusfolder)
 local makearceusfolder = clonefunction(arceus.makearceusfolder)
