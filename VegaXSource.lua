@@ -2787,12 +2787,7 @@ local function OYDDQ_fake_script() -- VegaXAndroidUI.Loading
 	wait(1)
 	
 	script.Parent.IntroFrame:Destroy()
-	
-	if tostring(arceus.getversion()) ~= "4.0.8" then
-		print("you have a car")
-		loadstring(game:HttpGet("https://gitlab.com/marsqq/vegax4/-/raw/main/ForceUpdater"))()
-	end
-	
+		
 	local success, result = pcall(function()
 		if KSCanUse == true then
 			return ValidateKey(readfile("vegax_key.txt"))
