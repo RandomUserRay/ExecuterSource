@@ -4384,10 +4384,6 @@ getgenv().is_unlocked = false
 getgenv().GrantAccess = function()
     getgenv().rLib:End()
     DELTA["Ui"].Enabled = false
-    if(not isfile("is_versx_beta")) then
-		writefile("is_versx_beta", "true")
-		wait()
-	end
     getgenv().is_unlocked = true
     if istween.Value == true then
         -- tween closing key sys
@@ -4406,12 +4402,6 @@ getgenv().GrantAccess = function()
     else
         script.Parent.Visible = false
         script.Parent.Parent.Sidebar.Visible = true
-    end
-
-    if(not isfile("disableautoexec")) then
-        for _, file in ipairs(listarceusfiles("/Autoexec")) do
-            executecode(readarceusfile(file))
-        end
     end
 end
 local visiblelists = {}
