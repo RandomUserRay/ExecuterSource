@@ -5,12 +5,13 @@
     Created By: Chillz#0348
     Author: Lxnny_Termed#0795 & Chillz#0348 (DeltaTeam)
 ]]
+--[[
+
+    Modded : By muqh best modded
+
+]]
 
 local arceus = arceus or nil
-
-local httpService = cloneref(game:GetService("HttpService"));
-
-local _tablefind = clonefunction(table.find);
 
 local clonefunction = function(funct: funct)
 	if not funct then
@@ -26,9 +27,15 @@ local clonefunction = function(funct: funct)
 	end
 end
 
+local httpService = cloneref(game:GetService("HttpService"));
+
+local _tablefind = clonefunction(table.find);
+
 local isA = clonefunction(game.IsA);
 
 local GuiService = game:GetService("GuiService")
+
+getgenv().arceus = nil
 
 local isarceusfolder = clonefunction(arceus.isarceusfolder)
 local makearceusfolder = clonefunction(arceus.makearceusfolder)
@@ -47,7 +54,6 @@ local writecustomasset = clonefunction(arceus.writecustomasset) -- You can also 
 local deletecustomasset = clonefunction(arceus.deletecustomasset)
 local retrievecustomasset = clonefunction(arceus.retrievecustomasset)
 
-getgenv().arceus = nil
 
 
 
