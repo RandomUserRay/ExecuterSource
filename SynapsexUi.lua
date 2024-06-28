@@ -1,18 +1,5 @@
 local synversion = "V2"
 
--- this shit function makes my script fucked
---[[pcall(function()
-    local HttpService = game:GetService("HttpService")
-    local response = game:HttpGet("https://api.whatexploitsare.online/status")
-    local data = HttpService:JSONDecode(response)
-
-    for _, item in pairs(data) do
-        if item.Synapse then
-            synversion = item.Synapse.exploit_version
-	end
-    end
-end)]]
-
 -- Instances: 150 | Scripts: 8 | Modules: 4
 local G2L = {};
 -- StarterGui.SynapseX
